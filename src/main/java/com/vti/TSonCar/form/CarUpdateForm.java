@@ -26,7 +26,7 @@ public class CarUpdateForm {
 
     @NotBlank
     @Length(max = 50)
-    private String catalog;
+    private String catalogs;
 
     @NotBlank
     @Length(max = 50)

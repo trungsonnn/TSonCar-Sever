@@ -20,7 +20,7 @@ public class CarMapper {
 
     public static Car map(CarUpdateForm form) {
         var car = new Car();
-        car.setCatalogs(form.getCatalog());
+        car.setCatalogs(form.getCatalogs());
         car.setCarMaker(form.getCarMaker());
         car.setCustomerName(form.getCustomerName());
         return car;
@@ -36,5 +36,11 @@ public class CarMapper {
         dto.setCarMaker(car.getCarMaker());
         return dto;
     }
+
+    public static void map(CarUpdateForm form, Car car) {
+        car.setCustomerName(form.getCustomerName());
+        car.setCatalogs(form.getCatalogs());
+        car.setCarMaker(form.getCarMaker());
     }
+}
 
